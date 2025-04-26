@@ -2,7 +2,7 @@
 
 A full-stack application for collecting and managing user feedback with React, Node.js, and MongoDB.
 
-![App Screenshot](https://via.placeholder.com/800x400?text=Feedback+System+Screenshot)
+![User Feedback System Interface](frontend/screenshots/Screenshot%202025-04-27%20013849.png)
 
 ## Features
 - Submit feedback via form
