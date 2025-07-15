@@ -11,6 +11,7 @@ connectDB().then(() => {
     console.log(`🚀 Server running on port ${PORT}`);
   });
 
+  // Graceful shutdown on unhandled rejections
   process.on('unhandledRejection', (err) => {
     console.error('Unhandled Rejection:', err);
     server.close(() => process.exit(1));
