@@ -1,5 +1,8 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/api/(.*)",
+      "destination": "http://user-feedback-system-1-dil9.onrender.com/api/$1"
+    }
   ]
 }
