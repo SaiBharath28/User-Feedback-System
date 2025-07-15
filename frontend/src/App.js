@@ -15,6 +15,9 @@ const theme = createTheme({
   },
 });
 
+// Optional: Global backend URL if needed
+export const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
