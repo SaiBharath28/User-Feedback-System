@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import FeedbackList from '../components/FeedbackList';
 
+// Get backend URL from environment variable
+const API_BASE = import.meta.env.VITE_API_URL;
+
 const Dashboard = () => {
   const [feedback, setFeedback] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -10,9 +13,7 @@ const Dashboard = () => {
   const fetchFeedback = async (params = {}) => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:5000/api/feedback', {
-        params
-      });
+      const response = await axios.get(`${API_BASE}/api/feedback`, { params });
       setFeedback(response.data.data);
       setError('');
     } catch (err) {
